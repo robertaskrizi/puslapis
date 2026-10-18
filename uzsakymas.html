@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="lt">
+<!-- TINKLALAPIO SCHEMA:
+     html
+     ├── head  (meta, title, nuoroda į css/stilius.css)
+     └── body
+         ├── header#virsus      – puslapio antraštė su logotipu
+         ├── nav#meniu          – meniu (sąrašas ul > li > a)
+         ├── div.puslapis       – dviejų dalių išdėstymas
+         │   ├── main.turinys   – "Content" dalis (viduje 2–3 stulpeliai)
+         │   └── aside          – šoninis blokas
+         └── footer#apacia      – poraštė
+-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anketa | BitKalvė</title>
+    <link rel="stylesheet" href="css/stilius.css">
+</head>
+<body>
+
+    <header id="virsus">
+        <img id="logotipas" src="img/logotipas.svg" alt="BitKalvė logotipas">
+        <div>
+            <h1>BitKalvė</h1>
+            <p>Kompiuterių surinkimo ir atnaujinimo dirbtuvė Vilniuje</p>
+        </div>
+    </header>
+
+    <nav id="meniu">
+        <ul>
+            <li><a href="index.html">Pagrindinis</a></li>
+            <li><a href="apie.html">Apie</a></li>
+            <li><a href="galerija.html">Galerija</a></li>
+            <li><a href="uzsakymas.html" class="aktyvus">Anketa</a></li>
+            <li><a href="kontaktai.html">Kontaktai</a></li>
+        </ul>
+    </nav>
+
+    <div class="puslapis">
+
+        <main class="turinys">
+            <h2>Užsakymo anketa</h2>
+            <p class="ivadas">Užpildykite anketą — per 1 darbo dieną atsiųsime
+               pasiūlymą su dalių sąrašu ir kaina.</p>
+
+            <form class="anketa" action="#" method="get">
+
+                <fieldset>
+                    <legend>Kontaktiniai duomenys</legend>
+                    <div class="stulpeliai-2">
+                        <div class="laukas">
+                            <label for="vardas">Vardas, pavardė *</label>
+                            <input type="text" id="vardas" name="vardas" placeholder="Jonas Jonaitis" required>
+                        </div>
+                        <div class="laukas">
+                            <label for="el-pastas">El. paštas *</label>
+                            <input type="email" id="el-pastas" name="el-pastas" placeholder="vardas@pastas.lt" required>
+                        </div>
+                        <div class="laukas">
+                            <label for="telefonas">Telefonas</label>
+                            <input type="tel" id="telefonas" name="telefonas" placeholder="+370 600 00000" pattern="[+0-9 ]{8,16}">
+                        </div>
+                        <div class="laukas">
+                            <label for="data">Pageidaujama atsiėmimo data</label>
+                            <input type="date" id="data" name="data">
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Kompiuterio paskirtis</legend>
+                    <div class="laukas pasirinkimai">
+                        <label><input type="radio" name="paskirtis" value="mokslai" checked> Mokslai / biuras</label>
+                        <label><input type="radio" name="paskirtis" value="zaidimai"> Žaidimai</label>
+                        <label><input type="radio" name="paskirtis" value="kuryba"> Montažas / 3D</label>
+                        <label><input type="radio" name="paskirtis" value="programavimas"> Programavimas</label>
+                    </div>
+                    <div class="stulpeliai-2">
+                        <div class="laukas">
+                            <label for="paketas">Surinkimo paketas</label>
+                            <select id="paketas" name="paketas">
+                                <option value="bazinis">Bazinis — 49 €</option>
+                                <option value="pro" selected>Pro — 89 €</option>
+                                <option value="ultra">Ultra — 149 €</option>
+                            </select>
+                        </div>
+                        <div class="laukas">
+                            <label for="kiekis">Kompiuterių kiekis</label>
+                            <input type="number" id="kiekis" name="kiekis" min="1" max="20" value="1">
+                        </div>
+                    </div>
+                    <div class="laukas">
+                        <label for="biudzetas">Biudžetas (nuo 400 iki 3000 €)</label>
+                        <input type="range" id="biudzetas" name="biudzetas" min="400" max="3000" step="100" value="1200">
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Papildomos paslaugos</legend>
+                    <div class="laukas pasirinkimai">
+                        <label><input type="checkbox" name="papildomai" value="os"> OS diegimas</label>
+                        <label><input type="checkbox" name="papildomai" value="wifi"> Wi-Fi modulis</label>
+                        <label><input type="checkbox" name="papildomai" value="rgb"> RGB apšvietimas</label>
+                        <label><input type="checkbox" name="papildomai" value="pristatymas"> Pristatymas</label>
+                    </div>
+                    <div class="stulpeliai-2">
+                        <div class="laukas">
+                            <label for="spalva">Apšvietimo spalva</label>
+                            <input type="color" id="spalva" name="spalva" value="#e2702a">
+                        </div>
+                        <div class="laukas">
+                            <label for="nuoroda">Nuoroda į pavyzdį (nebūtina)</label>
+                            <input type="url" id="nuoroda" name="nuoroda" placeholder="https://...">
+                        </div>
+                    </div>
+                    <div class="laukas">
+                        <label for="failas">Prisegti dalių sąrašą</label>
+                        <input type="file" id="failas" name="failas" accept=".pdf,.txt,.xlsx">
+                    </div>
+                    <div class="laukas">
+                        <label for="komentaras">Komentaras</label>
+                        <textarea id="komentaras" name="komentaras" rows="4" placeholder="Pvz.: noriu tylaus kompiuterio..."></textarea>
+                    </div>
+                    <div class="laukas pasirinkimai">
+                        <label><input type="checkbox" name="sutikimas" required> Sutinku su duomenų tvarkymo taisyklėmis *</label>
+                    </div>
+                    <input type="hidden" name="saltinis" value="svetaine">
+                </fieldset>
+
+                <input type="submit" class="mygtukas" value="Siųsti užsakymą">
+                <input type="reset" class="mygtukas antrinis" value="Išvalyti">
+                <p class="pastaba">* — privalomi laukai</p>
+            </form>
+
+        </main>
+
+        <aside>
+            <h3>Darbo laikas</h3>
+            <ul>
+                <li>I–V: 9:00–18:00</li>
+                <li>VI: 10:00–15:00</li>
+                <li>VII: nedirbame</li>
+            </ul>
+            <h3>Greitos nuorodos</h3>
+            <ul>
+                <li><a href="uzsakymas.html">Užsakyti surinkimą</a></li>
+                <li><a href="galerija.html">Komponentų galerija</a></li>
+                <li><a href="kontaktai.html">Kaip mus rasti</a></li>
+            </ul>
+
+        </aside>
+
+    </div>
+
+    <footer id="apacia">
+        <p>&copy; 2026 BitKalvė. Mokomasis projektas.
+           | <a href="kontaktai.html">Kontaktai</a>
+           | <a href="mailto:info@bitkalve.lt">info@bitkalve.lt</a></p>
+    </footer>
+
+</body>
+</html>

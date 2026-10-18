@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="lt">
+<!-- TINKLALAPIO SCHEMA:
+     html
+     ├── head  (meta, title, nuoroda į css/stilius.css)
+     └── body
+         ├── header#virsus      – puslapio antraštė su logotipu
+         ├── nav#meniu          – meniu (sąrašas ul > li > a)
+         ├── div.puslapis       – dviejų dalių išdėstymas
+         │   ├── main.turinys   – "Content" dalis (viduje 2–3 stulpeliai)
+         │   └── aside          – šoninis blokas
+         └── footer#apacia      – poraštė
+-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apie | BitKalvė</title>
+    <link rel="stylesheet" href="css/stilius.css">
+</head>
+<body>
+
+    <header id="virsus">
+        <img id="logotipas" src="img/logotipas.svg" alt="BitKalvė logotipas">
+        <div>
+            <h1>BitKalvė</h1>
+            <p>Kompiuterių surinkimo ir atnaujinimo dirbtuvė Vilniuje</p>
+        </div>
+    </header>
+
+    <nav id="meniu">
+        <ul>
+            <li><a href="index.html">Pagrindinis</a></li>
+            <li><a href="apie.html" class="aktyvus">Apie</a></li>
+            <li><a href="galerija.html">Galerija</a></li>
+            <li><a href="uzsakymas.html">Anketa</a></li>
+            <li><a href="kontaktai.html">Kontaktai</a></li>
+        </ul>
+    </nav>
+
+    <div class="puslapis">
+
+        <main class="turinys">
+            <h2>Apie BitKalvę</h2>
+            <p class="ivadas">Esame nedidelė dirbtuvė, kurioje kompiuteriai renkami
+               rankomis — kaip kalvėje, tik vietoj geležies — silicis.</p>
+
+            <!-- 2 stulpelių struktūra -->
+            <div class="stulpeliai-2">
+                <section>
+                    <h3>Mūsų istorija</h3>
+                    <p>Dirbtuvė įkurta 2021 m., kai keli informatikos studentai pradėjo
+                       rinkti kompiuterius draugams. Šiandien per metus surenkame
+                       daugiau nei 400 kompiuterių.</p>
+                    <p>Dirbame su studentais, žaidėjais, dizaineriais, programuotojais
+                       ir mažomis įmonėmis.</p>
+                </section>
+                <section>
+                    <h3>Mūsų vertybės</h3>
+                    <ul>
+                        <li><strong>Sąžiningumas</strong> — nesiūlome nereikalingų dalių.</li>
+                        <li><strong>Kokybė</strong> — kiekvieną kompiuterį testuojame.</li>
+                        <li><strong>Aiškumas</strong> — paaiškiname, už ką mokate.</li>
+                        <li><strong>Tvarumas</strong> — senas dalis priimame perdirbti.</li>
+                    </ul>
+                </section>
+            </div>
+
+            <h2>Kompiuterio sudedamosios dalys</h2>
+            <p>Trumpas gidas, kuri dalis už ką atsakinga:</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Dalis</th>
+                        <th>Paskirtis</th>
+                        <th>Į ką atkreipti dėmesį</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Procesorius (CPU)</td>
+                        <td>Atlieka skaičiavimus</td>
+                        <td>Branduolių skaičius, dažnis, lizdas</td>
+                    </tr>
+                    <tr>
+                        <td>Vaizdo plokštė (GPU)</td>
+                        <td>Grafikos apdorojimas</td>
+                        <td>Vaizdo atmintis (VRAM), maitinimas</td>
+                    </tr>
+                    <tr>
+                        <td>Operatyvioji atmintis (RAM)</td>
+                        <td>Laikini duomenys darbo metu</td>
+                        <td>Talpa, dažnis, DDR karta</td>
+                    </tr>
+                    <tr>
+                        <td>SSD diskas</td>
+                        <td>Ilgalaikis duomenų saugojimas</td>
+                        <td>Talpa, sąsaja (NVMe / SATA)</td>
+                    </tr>
+                    <tr>
+                        <td>Pagrindinė plokštė</td>
+                        <td>Sujungia visas dalis</td>
+                        <td>Lizdas, formatas, jungtys</td>
+                    </tr>
+                    <tr>
+                        <td>Maitinimo blokas</td>
+                        <td>Tiekia elektrą</td>
+                        <td>Galia (W), sertifikatas (80+)</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2>Komanda</h2>
+            <div class="stulpeliai-3">
+                <section class="kortele">
+                    <h3>Tomas</h3>
+                    <p>Vadovas, aušinimo sistemų entuziastas.</p>
+                </section>
+                <section class="kortele">
+                    <h3>Ieva</h3>
+                    <p>Dalių parinkimas ir konsultacijos.</p>
+                </section>
+                <section class="kortele">
+                    <h3>Mantas</h3>
+                    <p>Surinkimas, testavimas ir remontas.</p>
+                </section>
+            </div>
+
+        </main>
+
+        <aside>
+            <h3>Darbo laikas</h3>
+            <ul>
+                <li>I–V: 9:00–18:00</li>
+                <li>VI: 10:00–15:00</li>
+                <li>VII: nedirbame</li>
+            </ul>
+            <h3>Greitos nuorodos</h3>
+            <ul>
+                <li><a href="uzsakymas.html">Užsakyti surinkimą</a></li>
+                <li><a href="galerija.html">Komponentų galerija</a></li>
+                <li><a href="kontaktai.html">Kaip mus rasti</a></li>
+            </ul>
+
+        </aside>
+
+    </div>
+
+    <footer id="apacia">
+        <p>&copy; 2026 BitKalvė. Mokomasis projektas.
+           | <a href="kontaktai.html">Kontaktai</a>
+           | <a href="mailto:info@bitkalve.lt">info@bitkalve.lt</a></p>
+    </footer>
+
+</body>
+</html>

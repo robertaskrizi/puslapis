@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="lt">
+<!-- TINKLALAPIO SCHEMA:
+     html
+     ├── head  (meta, title, nuoroda į css/stilius.css)
+     └── body
+         ├── header#virsus      – puslapio antraštė su logotipu
+         ├── nav#meniu          – meniu (sąrašas ul > li > a)
+         ├── div.puslapis       – dviejų dalių išdėstymas
+         │   ├── main.turinys   – "Content" dalis (viduje 2–3 stulpeliai)
+         │   └── aside          – šoninis blokas
+         └── footer#apacia      – poraštė
+-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galerija | BitKalvė</title>
+    <link rel="stylesheet" href="css/stilius.css">
+</head>
+<body>
+
+    <header id="virsus">
+        <img id="logotipas" src="img/logotipas.svg" alt="BitKalvė logotipas">
+        <div>
+            <h1>BitKalvė</h1>
+            <p>Kompiuterių surinkimo ir atnaujinimo dirbtuvė Vilniuje</p>
+        </div>
+    </header>
+
+    <nav id="meniu">
+        <ul>
+            <li><a href="index.html">Pagrindinis</a></li>
+            <li><a href="apie.html">Apie</a></li>
+            <li><a href="galerija.html" class="aktyvus">Galerija</a></li>
+            <li><a href="uzsakymas.html">Anketa</a></li>
+            <li><a href="kontaktai.html">Kontaktai</a></li>
+        </ul>
+    </nav>
+
+    <div class="puslapis">
+
+        <main class="turinys">
+            <h2>Komponentų galerija</h2>
+            <p class="ivadas">Pagrindinės dalys, iš kurių renkame kompiuterius.
+               Kiekvieną jų parenkame pagal jūsų poreikius ir biudžetą.</p>
+
+            <!-- Paveikslėlių blokas (6 pav., 3 stulpeliai) -->
+            <div class="galerija">
+                <figure>
+                    <img src="img/procesorius.svg" alt="Procesorius">
+                    <figcaption><strong>Procesorius</strong>Kompiuterio „smegenys“.</figcaption>
+                </figure>
+                <figure>
+                    <img src="img/vaizdo-plokste.svg" alt="Vaizdo plokštė">
+                    <figcaption><strong>Vaizdo plokštė</strong>Grafika žaidimams ir 3D darbams.</figcaption>
+                </figure>
+                <figure>
+                    <img src="img/operatyvioji-atmintis.svg" alt="Operatyvioji atmintis">
+                    <figcaption><strong>Operatyvioji atmintis</strong>Greita laikina atmintis.</figcaption>
+                </figure>
+                <figure>
+                    <img src="img/ssd-diskas.svg" alt="SSD diskas">
+                    <figcaption><strong>SSD diskas</strong>Greitas duomenų saugojimas.</figcaption>
+                </figure>
+                <figure>
+                    <img src="img/pagrindine-plokste.svg" alt="Pagrindinė plokštė">
+                    <figcaption><strong>Pagrindinė plokštė</strong>Jungia visas dalis kartu.</figcaption>
+                </figure>
+                <figure>
+                    <img src="img/kompiuterio-korpusas.svg" alt="Korpusas">
+                    <figcaption><strong>Korpusas</strong>Apsauga ir oro srautas.</figcaption>
+                </figure>
+            </div>
+
+            <h2>Populiarios konfigūracijos</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Konfigūracija</th>
+                        <th>Paskirtis</th>
+                        <th>RAM</th>
+                        <th>Kaina nuo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Studentas</td><td>Mokslai, biuras</td><td>16 GB</td><td>550 &euro;</td></tr>
+                    <tr><td>Žaidėjas</td><td>Žaidimai 1440p</td><td>32 GB</td><td>1200 &euro;</td></tr>
+                    <tr><td>Kūrėjas</td><td>Montažas, 3D</td><td>64 GB</td><td>1900 &euro;</td></tr>
+                </tbody>
+            </table>
+
+        </main>
+
+        <aside>
+            <h3>Darbo laikas</h3>
+            <ul>
+                <li>I–V: 9:00–18:00</li>
+                <li>VI: 10:00–15:00</li>
+                <li>VII: nedirbame</li>
+            </ul>
+            <h3>Greitos nuorodos</h3>
+            <ul>
+                <li><a href="uzsakymas.html">Užsakyti surinkimą</a></li>
+                <li><a href="galerija.html">Komponentų galerija</a></li>
+                <li><a href="kontaktai.html">Kaip mus rasti</a></li>
+            </ul>
+
+        </aside>
+
+    </div>
+
+    <footer id="apacia">
+        <p>&copy; 2026 BitKalvė. Mokomasis projektas.
+           | <a href="kontaktai.html">Kontaktai</a>
+           | <a href="mailto:info@bitkalve.lt">info@bitkalve.lt</a></p>
+    </footer>
+
+</body>
+</html>

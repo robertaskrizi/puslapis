@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="lt">
+<!-- TINKLALAPIO SCHEMA:
+     html
+     ├── head  (meta, title, nuoroda į css/stilius.css)
+     └── body
+         ├── header#virsus      – puslapio antraštė su logotipu
+         ├── nav#meniu          – meniu (sąrašas ul > li > a)
+         ├── div.puslapis       – dviejų dalių išdėstymas
+         │   ├── main.turinys   – "Content" dalis (viduje 2–3 stulpeliai)
+         │   └── aside          – šoninis blokas
+         └── footer#apacia      – poraštė
+-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagrindinis | BitKalvė</title>
+    <link rel="stylesheet" href="css/stilius.css">
+</head>
+<body>
+
+    <header id="virsus">
+        <img id="logotipas" src="img/logotipas.svg" alt="BitKalvė logotipas">
+        <div>
+            <h1>BitKalvė</h1>
+            <p>Kompiuterių surinkimo ir atnaujinimo dirbtuvė Vilniuje</p>
+        </div>
+    </header>
+
+    <nav id="meniu">
+        <ul>
+            <li><a href="index.html" class="aktyvus">Pagrindinis</a></li>
+            <li><a href="apie.html">Apie</a></li>
+            <li><a href="galerija.html">Galerija</a></li>
+            <li><a href="uzsakymas.html">Anketa</a></li>
+            <li><a href="kontaktai.html">Kontaktai</a></li>
+        </ul>
+    </nav>
+
+    <div class="puslapis">
+
+        <main class="turinys">
+            <h2>Kompiuteris, sukaltas pagal jus</h2>
+            <p class="ivadas">BitKalvė surenka stalinius kompiuterius žaidimams, darbui
+               ir mokslui. Padedame išsirinkti dalis, jas suderiname, surenkame,
+               išbandome ir suteikiame garantiją.</p>
+
+            <!-- 3 stulpelių struktūra -->
+            <div class="stulpeliai-3">
+                <section class="kortele">
+                    <div class="ikona">&#128295;</div>
+                    <h3>Surinkimas</h3>
+                    <p>Sudedame jūsų pasirinktas arba mūsų pasiūlytas dalis, tvarkingai
+                       sutvarkome laidus ir įdiegiame operacinę sistemą.</p>
+                </section>
+                <section class="kortele">
+                    <div class="ikona">&#9889;</div>
+                    <h3>Atnaujinimas</h3>
+                    <p>Pakeičiame vaizdo plokštę, pridedame atminties ar greitesnį SSD
+                       diską — senas kompiuteris vėl veikia sparčiai.</p>
+                </section>
+                <section class="kortele">
+                    <div class="ikona">&#129514;</div>
+                    <h3>Testavimas</h3>
+                    <p>Kiekvienas kompiuteris 24 valandas tikrinamas apkrovos testais:
+                       temperatūros, stabilumas, triukšmas.</p>
+                </section>
+            </div>
+
+            <h2>Surinkimo paketai</h2>
+            <p>Klasė <code>.rekomenduojama</code> su <code>!important</code> nugali
+               ID selektorių <code>#paketas-pro</code> — todėl rekomenduojamo paketo
+               rėmelis oranžinis.</p>
+
+            <div class="stulpeliai-3">
+                <section id="paketas-bazinis" class="kortele">
+                    <h3>Bazinis</h3>
+                    <p class="kaina">49 &euro;</p>
+                    <ul>
+                        <li>Dalių surinkimas</li>
+                        <li>BIOS nustatymai</li>
+                        <li>Greitas patikrinimas</li>
+                    </ul>
+                </section>
+                <section id="paketas-pro" class="kortele rekomenduojama">
+                    <h3>Pro</h3>
+                    <p class="kaina">89 &euro;</p>
+                    <ul>
+                        <li>Viskas iš „Bazinio“</li>
+                        <li>Tvarkingas laidų montavimas</li>
+                        <li>OS ir tvarkyklių diegimas</li>
+                        <li>24 val. apkrovos testas</li>
+                    </ul>
+                </section>
+                <section id="paketas-ultra" class="kortele">
+                    <h3>Ultra</h3>
+                    <p class="kaina">149 &euro;</p>
+                    <ul>
+                        <li>Viskas iš „Pro“</li>
+                        <li>Dalių parinkimas pagal biudžetą</li>
+                        <li>Aušinimo optimizavimas</li>
+                        <li>1 metų priežiūra</li>
+                    </ul>
+                </section>
+            </div>
+
+            <h2>Kaip vyksta užsakymas</h2>
+            <ol>
+                <li>Užpildote <a href="uzsakymas.html">anketą</a>.</li>
+                <li>Per 1 darbo dieną atsiunčiame dalių sąrašą ir kainą.</li>
+                <li>Patvirtinus, užsakome dalis.</li>
+                <li>Surenkame, testuojame ir kviečiame atsiimti.</li>
+            </ol>
+
+        </main>
+
+        <aside>
+            <h3>Darbo laikas</h3>
+            <ul>
+                <li>I–V: 9:00–18:00</li>
+                <li>VI: 10:00–15:00</li>
+                <li>VII: nedirbame</li>
+            </ul>
+            <h3>Greitos nuorodos</h3>
+            <ul>
+                <li><a href="uzsakymas.html">Užsakyti surinkimą</a></li>
+                <li><a href="galerija.html">Komponentų galerija</a></li>
+                <li><a href="kontaktai.html">Kaip mus rasti</a></li>
+            </ul>
+            <h3>Akcija</h3>
+            <p>Spalį „Pro“ paketui — nemokamas OS diegimas.</p>
+        </aside>
+
+    </div>
+
+    <footer id="apacia">
+        <p>&copy; 2026 BitKalvė. Mokomasis projektas.
+           | <a href="kontaktai.html">Kontaktai</a>
+           | <a href="mailto:info@bitkalve.lt">info@bitkalve.lt</a></p>
+    </footer>
+
+</body>
+</html>

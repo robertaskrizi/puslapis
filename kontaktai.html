@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="lt">
+<!-- TINKLALAPIO SCHEMA:
+     html
+     ├── head  (meta, title, nuoroda į css/stilius.css)
+     └── body
+         ├── header#virsus      – puslapio antraštė su logotipu
+         ├── nav#meniu          – meniu (sąrašas ul > li > a)
+         ├── div.puslapis       – dviejų dalių išdėstymas
+         │   ├── main.turinys   – "Content" dalis (viduje 2–3 stulpeliai)
+         │   └── aside          – šoninis blokas
+         └── footer#apacia      – poraštė
+-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontaktai | BitKalvė</title>
+    <link rel="stylesheet" href="css/stilius.css">
+</head>
+<body>
+
+    <header id="virsus">
+        <img id="logotipas" src="img/logotipas.svg" alt="BitKalvė logotipas">
+        <div>
+            <h1>BitKalvė</h1>
+            <p>Kompiuterių surinkimo ir atnaujinimo dirbtuvė Vilniuje</p>
+        </div>
+    </header>
+
+    <nav id="meniu">
+        <ul>
+            <li><a href="index.html">Pagrindinis</a></li>
+            <li><a href="apie.html">Apie</a></li>
+            <li><a href="galerija.html">Galerija</a></li>
+            <li><a href="uzsakymas.html">Anketa</a></li>
+            <li><a href="kontaktai.html" class="aktyvus">Kontaktai</a></li>
+        </ul>
+    </nav>
+
+    <div class="puslapis">
+
+        <main class="turinys">
+            <h2>Kontaktai</h2>
+            <p class="ivadas">Atvažiuokite, paskambinkite ar parašykite — mielai
+               pakonsultuosime.</p>
+
+            <div class="stulpeliai-2">
+                <section>
+                    <h3>Kaip susisiekti</h3>
+                    <ul class="kontaktu-sarasas">
+                        <li><strong>Adresas:</strong> Saulėtekio al. 00, Vilnius (pavyzdinis)</li>
+                        <li><strong>Telefonas:</strong> <a href="tel:+37060000000">+370 600 00000</a></li>
+                        <li><strong>El. paštas:</strong> <a href="mailto:info@bitkalve.lt">info@bitkalve.lt</a></li>
+                        <li><strong>Įmonės kodas:</strong> 000000000 (pavyzdinis)</li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>Kaip atvykti</h3>
+                    <div class="zemelapis">
+                        <p>&#128205; Šalia „Saulėtekio“ stotelės</p>
+                        <p>Autobusai: 10, 33, 3G</p>
+                        <p>Nemokama automobilių stovėjimo aikštelė kieme</p>
+                    </div>
+                </section>
+            </div>
+
+            <h2>Darbo laikas</h2>
+            <table>
+                <thead>
+                    <tr><th>Diena</th><th>Dirbtuvė</th><th>Konsultacijos telefonu</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Pirmadienis–penktadienis</td><td>9:00–18:00</td><td>9:00–20:00</td></tr>
+                    <tr><td>Šeštadienis</td><td>10:00–15:00</td><td>10:00–15:00</td></tr>
+                    <tr><td>Sekmadienis</td><td>Nedirbame</td><td>Nedirbame</td></tr>
+                </tbody>
+            </table>
+
+            <h2>Dažni klausimai</h2>
+            <dl>
+                <dt><strong>Kiek trunka surinkimas?</strong></dt>
+                <dd>Paprastai 2–4 darbo dienas, kai visos dalys yra sandėlyje.</dd>
+                <dt><strong>Ar galiu atsinešti savo dalis?</strong></dt>
+                <dd>Taip, surinksime ir jūsų įsigytas dalis.</dd>
+                <dt><strong>Kokia garantija?</strong></dt>
+                <dd>Surinkimo darbams — 12 mėnesių, dalims — gamintojo garantija.</dd>
+            </dl>
+
+        </main>
+
+        <aside>
+            <h3>Darbo laikas</h3>
+            <ul>
+                <li>I–V: 9:00–18:00</li>
+                <li>VI: 10:00–15:00</li>
+                <li>VII: nedirbame</li>
+            </ul>
+            <h3>Greitos nuorodos</h3>
+            <ul>
+                <li><a href="uzsakymas.html">Užsakyti surinkimą</a></li>
+                <li><a href="galerija.html">Komponentų galerija</a></li>
+                <li><a href="kontaktai.html">Kaip mus rasti</a></li>
+            </ul>
+
+        </aside>
+
+    </div>
+
+    <footer id="apacia">
+        <p>&copy; 2026 BitKalvė. Mokomasis projektas.
+           | <a href="kontaktai.html">Kontaktai</a>
+           | <a href="mailto:info@bitkalve.lt">info@bitkalve.lt</a></p>
+    </footer>
+
+</body>
+</html>
